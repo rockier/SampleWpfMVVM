@@ -61,3 +61,6 @@ C:\GitHub_Samples\Application.Sample\Sample.WPFApp\obj\Debug\GeneratedInternalTy
 C:\GitHub_Samples\Application.Sample\Sample.WPFApp\obj\Debug\App.baml
 C:\GitHub_Samples\Application.Sample\Sample.WPFApp\obj\Debug\Forms\SampleCustomer.g.cs
 C:\GitHub_Samples\Application.Sample\Sample.WPFApp\obj\Debug\Forms\SampleCustomer.baml
+C:\SampleWpfMVVM\Sample.WPFApp\bin\Debug\Sample.WPFApp.exe.config
+C:\SampleWpfMVVM\Sample.WPFApp\obj\Debug\Sample.WPFApp.exe
+C:\SampleWpfMVVM\Sample.WPFApp\obj\Debug\Sample.WPFApp.pdb

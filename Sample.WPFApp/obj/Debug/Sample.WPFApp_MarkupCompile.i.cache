@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\GitHub_Samples\Application.Sample\Sample.WPFApp\obj\Debug\
+C:\SampleWpfMVVM\Sample.WPFApp\obj\Debug\
 Sample.WPFApp
 none
 false
 DEBUG;TRACE
-C:\GitHub_Samples\Application.Sample\Sample.WPFApp\App.xaml
+C:\SampleWpfMVVM\Sample.WPFApp\App.xaml
 32068905504
 
 141617367800
-74-837065473
+74-1089782868
 Forms\SampleCustomer.xaml;MainWindow.xaml;Resources\spFormButtonStyle.xaml;
 
 False
