@@ -7,7 +7,7 @@ namespace Sample.DataModel.ModelConfiguration
     {
         public CustomerConfiguration()
         {
-            Property(x => x.FristName)
+            Property(x => x.FirstName)
                 .HasMaxLength(20)
                 .IsRequired();
 

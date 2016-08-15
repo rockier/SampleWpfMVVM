@@ -23,7 +23,7 @@ namespace Sample.DataModel.Migrations.MssqlDB
                 {
                     new Customer()
                     {
-                        FristName = "Rockie",
+                        FirstName = "Rockie",
                         MiddleName = "W",
                         LastName = "Roper",
                         Address = "123 Main Street",

@@ -86,6 +86,10 @@
     <Compile Include="Migrations.MssqlDB\201608120307136_InitialCreate.Designer.cs">
       <DependentUpon>201608120307136_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations.MssqlDB\201608150408012_ChangeFirstNameField.cs" />
+    <Compile Include="Migrations.MssqlDB\201608150408012_ChangeFirstNameField.Designer.cs">
+      <DependentUpon>201608150408012_ChangeFirstNameField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations.MssqlDB\Configuration.cs" />
     <Compile Include="ModelConfiguration\CustomerConfiguration.cs" />
     <Compile Include="MssqlDataContext.cs" />
@@ -104,6 +108,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations.MssqlDB\201608120307136_InitialCreate.resx">
       <DependentUpon>201608120307136_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations.MssqlDB\201608150408012_ChangeFirstNameField.resx">
+      <DependentUpon>201608150408012_ChangeFirstNameField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

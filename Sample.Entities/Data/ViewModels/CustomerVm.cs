@@ -34,7 +34,7 @@ namespace Sample.Entities.Data.ViewModels
         public void Update(CustomerVm item)
         {
             this.Id = item.Id;
-            this.FristName = item.FristName;
+            this.FirstName = item.FirstName;
             this.MiddleName = item.MiddleName;
             this.LastName = item.LastName;
             this.Address = item.Address;
@@ -45,7 +45,7 @@ namespace Sample.Entities.Data.ViewModels
 
         public bool Validate()
         {
-            if(string.IsNullOrEmpty(FristName) || string.IsNullOrEmpty(LastName))
+            if(string.IsNullOrEmpty(FirstName) || string.IsNullOrEmpty(LastName))
             {
                 return false;
             }
@@ -66,15 +66,15 @@ namespace Sample.Entities.Data.ViewModels
             }
         }
 
-        public string FristName
+        public string FirstName
         {
-            get { return _customer.FristName; }
+            get { return _customer.FirstName; }
             set
             {
-                if (value != _customer.FristName)
+                if (value != _customer.FirstName)
                 {
-                    _customer.FristName = value;
-                    OnPropertyChanged("FristName");
+                    _customer.FirstName = value;
+                    OnPropertyChanged("FirstName");
                 }
             }
         }

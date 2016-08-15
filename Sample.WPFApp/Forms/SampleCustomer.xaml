@@ -27,7 +27,7 @@
                 HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,10,0,0" BorderBrush="Gray">
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Width="90" Header="First" DisplayMemberBinding="{Binding FristName}" />
+                                <GridViewColumn Width="90" Header="First" DisplayMemberBinding="{Binding FirstName}" />
                                 <GridViewColumn Width="60" Header="M" DisplayMemberBinding="{Binding MiddleName}" />
                                 <GridViewColumn Width="150" Header="Last" DisplayMemberBinding="{Binding LastName}" />
                             </GridView>
@@ -53,7 +53,7 @@
                             <Label Content="City" Grid.Column="0" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FFFAFAFA" />
                             <Label Content="State" Grid.Column="0" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FFFAFAFA" />
                             <Label Content="Postal" Grid.Column="0" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FFFAFAFA" />
-                                <TextBox Grid.Column="1" Text="{Binding SelectedItem.FristName, Mode=TwoWay}" Margin="10,18,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="120" FontSize="12" />
+                                <TextBox Grid.Column="1" Text="{Binding SelectedItem.FirstName, Mode=TwoWay}" Margin="10,18,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="120" FontSize="12" />
                                 <TextBox Grid.Column="1" Text="{Binding SelectedItem.MiddleName, Mode=TwoWay}" Margin="10,48,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="50" FontSize="12" />
                                 <TextBox Grid.Column="1" Text="{Binding SelectedItem.LastName, Mode=TwoWay}" Margin="10,78,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="140" FontSize="12" />
                                 <TextBox Grid.Column="1" Text="{Binding SelectedItem.Address, Mode=TwoWay}" Margin="10,108,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="140" FontSize="12" />

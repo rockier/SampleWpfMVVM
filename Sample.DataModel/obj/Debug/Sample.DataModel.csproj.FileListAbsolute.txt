@@ -54,9 +54,11 @@ C:\GitHub_Samples\Application.Sample\Sample.DataModel\bin\Debug\Sample.Entities.
 C:\GitHub_Samples\Application.Sample\Sample.DataModel\bin\Debug\roslyn\System.Console.dll
 C:\GitHub_Samples\Application.Sample\Sample.DataModel\obj\Debug\Sample.DataModel.Migrations.MssqlDB.InitialCreate.resources
 C:\GitHub_Samples\Application.Sample\Sample.DataModel\obj\Debug\Sample.DataModel.csproj.GenerateResource.Cache
+C:\GitHub_Samples\Application.Sample\Sample.DataModel\obj\Debug\Sample.DataModel.Migrations.MssqlDB.ChangeFirstNameField.resources
 C:\SampleWpfMVVM\Sample.DataModel\obj\Debug\Sample.DataModel.csproj.App.config
 C:\SampleWpfMVVM\Sample.DataModel\obj\Debug\Sample.DataModel.csprojResolveAssemblyReference.cache
 C:\SampleWpfMVVM\Sample.DataModel\obj\Debug\Sample.DataModel.Migrations.MssqlDB.InitialCreate.resources
+C:\SampleWpfMVVM\Sample.DataModel\obj\Debug\Sample.DataModel.Migrations.MssqlDB.ChangeFirstNameField.resources
 C:\SampleWpfMVVM\Sample.DataModel\obj\Debug\Sample.DataModel.csproj.GenerateResource.Cache
 C:\SampleWpfMVVM\Sample.DataModel\obj\Debug\Sample.DataModel.dll
 C:\SampleWpfMVVM\Sample.DataModel\obj\Debug\Sample.DataModel.pdb
