@@ -1,0 +1,74 @@
+﻿<Window x:Class="Sample.WPFApp.Forms.SampleCustomer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sample.WPFApp.Forms"
+        mc:Ignorable="d"
+        Title="SampleCustomer" Height="480" Width="640"
+        DataContext="{Binding CustomersVm, Source={StaticResource VMLocator}}">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="B2V" />
+    </Window.Resources>
+    <Grid Background="#FF274FD8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22" />
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Label Content="Customer Edit Form" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Century Gothic" Foreground="#FFE9F314"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <StackPanel Orientation="Horizontal">
+                <Grid Width="340">
+                    <ListView x:Name="FlvSearchGrid" Grid.Row="1" Grid.Column="0" ItemsSource="{Binding ItemList}"
+                SelectedItem="{Binding SelectedItem, Mode=OneWayToSource}" Height="345" Width="324"
+                HorizontalAlignment="Left" VerticalAlignment="Top" Margin="4,10,0,0" BorderBrush="Gray">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Width="90" Header="First" DisplayMemberBinding="{Binding FristName}" />
+                                <GridViewColumn Width="60" Header="M" DisplayMemberBinding="{Binding MiddleName}" />
+                                <GridViewColumn Width="150" Header="Last" DisplayMemberBinding="{Binding LastName}" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Button Grid.Column="0" Grid.Row="1" Command="{Binding AddCommand}" Content="Add New" Width="90"
+              Margin="10,364,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="24" />
+                    <Button Grid.Column="0" Grid.Row="1" Command="{Binding DeleteCommand}" Content="Delete" Width="90"
+              Margin="0,364,10,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="24" />
+                </Grid>
+                <Grid x:Name="Screen2Data" Width="280" Visibility="{Binding ItemSelected,Converter={StaticResource B2V}}">
+                    <StackPanel>
+                    <GroupBox Header="Customer Information" Height="354" Width="270" Margin="0,0,0,0" BorderBrush="Gray" Foreground="Black" FontSize="11">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="180" />
+                            </Grid.ColumnDefinitions>
+                            <Label Content="Frist Name" Grid.Column="0" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FFFAFAFA" />
+                            <Label Content="Middle Name" Grid.Column="0" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FFFAFAFA" />
+                            <Label Content="Last Name" Grid.Column="0" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FFFAFAFA" />
+                            <Label Content="Address" Grid.Column="0" HorizontalAlignment="Left" Margin="10,108,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FFFAFAFA" />
+                            <Label Content="City" Grid.Column="0" HorizontalAlignment="Left" Margin="10,138,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FFFAFAFA" />
+                            <Label Content="State" Grid.Column="0" HorizontalAlignment="Left" Margin="10,168,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FFFAFAFA" />
+                            <Label Content="Postal" Grid.Column="0" HorizontalAlignment="Left" Margin="10,198,0,0" VerticalAlignment="Top" FontSize="12" Foreground="#FFFAFAFA" />
+                                <TextBox Grid.Column="1" Text="{Binding SelectedItem.FristName, Mode=TwoWay}" Margin="10,18,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="120" FontSize="12" />
+                                <TextBox Grid.Column="1" Text="{Binding SelectedItem.MiddleName, Mode=TwoWay}" Margin="10,48,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="50" FontSize="12" />
+                                <TextBox Grid.Column="1" Text="{Binding SelectedItem.LastName, Mode=TwoWay}" Margin="10,78,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="140" FontSize="12" />
+                                <TextBox Grid.Column="1" Text="{Binding SelectedItem.Address, Mode=TwoWay}" Margin="10,108,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="140" FontSize="12" />
+                                <TextBox Grid.Column="1" Text="{Binding SelectedItem.City, Mode=TwoWay}" Margin="10,138,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="100" FontSize="12" />
+                                <TextBox Grid.Column="1" Text="{Binding SelectedItem.State, Mode=TwoWay}" Margin="10,168,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="50" FontSize="12" />
+                                <TextBox Grid.Column="1" Text="{Binding SelectedItem.PostalCode, Mode=TwoWay}" Margin="10,198,0,0" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" Width="80" FontSize="12" />
+                            </Grid>
+                    </GroupBox>
+                        <Grid Margin="0,10,0,0">
+                    <Button Grid.Column="0" Grid.Row="1" Command="{Binding UpdateCommand}" Content="Save" Height="24" Width="90" Margin="10,0,0,0" HorizontalAlignment="Left" />
+                    <Button Grid.Column="0" Grid.Row="1" Command="{Binding CancelCommand}" Content="Cancel" Height="24" Width="90" Margin="0,0,6,0" HorizontalAlignment="Right" />
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

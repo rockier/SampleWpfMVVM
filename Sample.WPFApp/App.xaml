@@ -1,0 +1,17 @@
+﻿<Application x:Class="Sample.WPFApp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:imp="clr-namespace:Sample.WPFApp.Implementation">
+    <Application.Resources>
+        <ResourceDictionary>
+            <imp:ViewModelLocator x:Key="VMLocator">
+                <imp:ViewModelLocator.Resolver>
+                    <imp:ViewModelResolver />
+                </imp:ViewModelLocator.Resolver>
+            </imp:ViewModelLocator>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/spFormButtonStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

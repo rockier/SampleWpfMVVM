@@ -1,0 +1,31 @@
+﻿<Window x:Class="Sample.WPFApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Sample.WPFApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="480" Width="640"
+       DataContext="{Binding MainFormDatasVm, Source={StaticResource VMLocator}}">
+    <Grid Background="#FF274FD8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="22" />
+            <RowDefinition />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="1">
+            <Grid.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF585DC1" Offset="0"/>
+                    <GradientStop Color="White" Offset="0.35"/>
+                    <GradientStop Color="#FF585DC1" Offset="1"/>
+                    <GradientStop Color="#FFF8F9FD" Offset="0.7"/>
+                </LinearGradientBrush>
+            </Grid.Background>
+            <Label Content="Click the button to see the customer form" Margin="200,140,0,0" Width="240" Height="28" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button Content="Click Me" Command="{Binding GetDataCommand}" HorizontalAlignment="Left" Margin="280,185,0,0" VerticalAlignment="Top" Width="75" Style="{DynamicResource spButtonStyle}" Foreground="#FF0C0B0B"/>
+            <TextBlock Text="This sample is to show how the no code behide MVVM works with enjecting the data to the form. The data is coming from a WebApi MVC project to pass the data using json as the data format" Margin="200,240,0,0" Width="240" Height="101" HorizontalAlignment="Left" VerticalAlignment="Top" TextWrapping="WrapWithOverflow"/>
+        </Grid>
+        <Label Content="Sample WPF Application with no code behide with MVVM" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Century Gothic" FontSize="10" Foreground="#FFFBDA0A"/>
+    </Grid>
+</Window>

@@ -1,0 +1,76 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+  <Style x:Key="ButtonFocusVisual">
+    <Setter Property="Control.Template">
+      <Setter.Value>
+        <ControlTemplate>
+          <Rectangle Margin="0" SnapsToDevicePixels="true" Stroke="#FF0A14C8" StrokeThickness="2" />
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+  <LinearGradientBrush x:Key="spButtonNormalBackground" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="#FFFFD635" Offset="1" />
+        <GradientStop Color="#FFFFD635" Offset="0.125" />
+        <GradientStop Color="#FF999897" Offset="0.004" />
+    </LinearGradientBrush>
+  <LinearGradientBrush x:Key="spButtonMouseOverBackground" EndPoint="0,1" StartPoint="0,0">
+    <GradientStop Color="#FF9BDC78" />
+    <GradientStop Color="#FF9BDC78" Offset="1" />
+    <GradientStop Color="#FFAAC8A0" Offset="0.694" />
+    <GradientStop Color="#FF9BC86E" Offset="0.44" />
+    <GradientStop Color="#FF9BC882" Offset="0.845" />
+  </LinearGradientBrush>
+  <SolidColorBrush x:Key="ButtonNormalBorder" Color="#FF707070" />
+  <Style x:Key="spButtonStyle" TargetType="{x:Type Button}">
+    <Setter Property="FocusVisualStyle" Value="{StaticResource ButtonFocusVisual}" />
+    <Setter Property="Background" Value="{StaticResource spButtonNormalBackground}" />
+    <Setter Property="BorderBrush" Value="{StaticResource ButtonNormalBorder}" />
+    <Setter Property="Width" Value="110" />
+    <Setter Property="Height" Value="30" />
+    <Setter Property="BorderThickness" Value="1" />
+    <Setter Property="Foreground" Value="White" />
+    <Setter Property="HorizontalContentAlignment" Value="Center" />
+    <Setter Property="VerticalContentAlignment" Value="Center" />
+    <Setter Property="FontFamily" Value="Century Gothic" />
+    <Setter Property="FontSize" Value="12" />
+    <Setter Property="Padding" Value="1" />
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="{x:Type Button}">
+          <Grid x:Name="spButtonGrid" HorizontalAlignment="Stretch" Height="Auto" VerticalAlignment="Stretch"
+                Width="Auto">
+            <Grid.Background>
+              <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="#FFF9DD6E" Offset="1"/>
+                                <GradientStop Color="#FFF7E18A" Offset="0.125"/>
+                                <GradientStop Color="#FF999897" Offset="0.004" />
+                            </LinearGradientBrush>
+            </Grid.Background>
+            <Border x:Name="spButtonBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Stretch"
+                    Height="Auto" VerticalAlignment="Stretch" Width="Auto">
+              <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center" />
+            </Border>
+          </Grid>
+          <ControlTemplate.Triggers>
+            <Trigger Property="IsKeyboardFocused" Value="true" />
+            <Trigger Property="ToggleButton.IsChecked" Value="true" />
+            <Trigger Property="IsEnabled" Value="false">
+              <Setter Property="Foreground" Value="#ADADAD" />
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+              <Setter Property="Foreground" Value="#FF0A14C8" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+              <Setter TargetName="spButtonBorder" Property="BorderThickness" Value="2" />
+              <Setter TargetName="spButtonBorder" Property="BorderBrush" Value="#FF0A14C8" />
+              <Setter TargetName="spButtonGrid" Property="Background"
+                      Value="{StaticResource spButtonMouseOverBackground}" />
+            </Trigger>
+          </ControlTemplate.Triggers>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>
