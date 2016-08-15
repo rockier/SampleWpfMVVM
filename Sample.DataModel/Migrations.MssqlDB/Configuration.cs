@@ -1,4 +1,7 @@
-﻿using System.Data.Entity.Migrations;
+﻿using Sample.Entities.Data.Models;
+using System.Collections.Generic;
+using System.Data.Entity.Migrations;
+using System.Linq;
 
 namespace Sample.DataModel.Migrations.MssqlDB
 {
